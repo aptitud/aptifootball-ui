@@ -4,7 +4,7 @@
   "description": "Frontend for Aptifootball",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc -p . -w",
+    "tsc": "tsc -p .",
     "start": "live-server --open=src"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/aptitud/aptifootball-ui",
   "dependencies": {
     "angular2": "2.0.0-alpha.44",
+    "es6-shim": "^0.33.13",
     "systemjs": "0.19.2"
   },
   "devDependencies": {
