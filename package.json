@@ -1,0 +1,29 @@
+{
+  "name": "aptifootball-ui",
+  "version": "1.0.0",
+  "description": "Frontend for Aptifootball",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc -p . -w",
+    "start": "live-server --open=src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aptitud/aptifootball-ui.git"
+  },
+  "keywords": [],
+  "author": "Aptitud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aptitud/aptifootball-ui/issues"
+  },
+  "homepage": "https://github.com/aptitud/aptifootball-ui",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.44",
+    "systemjs": "0.19.2"
+  },
+  "devDependencies": {
+    "live-server": "^0.8.2",
+    "typescript": "^1.6.2"
+  }
+}

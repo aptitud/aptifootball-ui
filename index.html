@@ -1,6 +1,17 @@
 <html>
-<body>
-  good stuff here...
+<head>
+    <title>Aptifootball</title>
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
+    <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script>
+  System.config({
+    packages: {'app': {defaultExtension: 'js'}}
+  });
+  System.import('app/aptifootball');
 
-</body
+    </script>
+</head>
+<body>
+<my-app>loading...</my-app>
+</body>
 </html>
