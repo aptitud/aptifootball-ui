@@ -14,10 +14,10 @@
         controller: 'UserController as vm'
       })
 
-      .state('leauge', {
-        url: '/leauge',
-        templateUrl: 'app/partials/leauge/leauge.html',
-        controller: 'LeaugeController as vm'
+      .state('league', {
+        url: '/league',
+        templateUrl: 'app/partials/league/league.html',
+        controller: 'LeagueController as vm'
       })
 
     $urlRouterProvider.otherwise('/user');
