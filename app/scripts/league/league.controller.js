@@ -6,10 +6,10 @@
     .controller('LeagueController', function(LeagueService, toastr) {
       var vm = this;
       vm.league = null;
-      vm.leagues = [{"name": "League1", "id": "0"}, {"id": "1", "name": "League2"}];
+      vm.leagues = [{"id": "0", "name": "League1"}, {"id": "1", "name": "League2"}];
 
       vm.registerLeague = function() {
-        vm.leagues.push(vm.league.name);
+        vm.leagues.push(vm.league);
         /*LeagueService.createLeague(vm.user)
           .then(onRegisterLeagueSuccess, onRegisterLeagueFailure);*/
       }
