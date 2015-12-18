@@ -6,41 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="css/aptifootball.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="app/css/aptifootball.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/angular-toastr/dist/angular-toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
 
-    <script src="app/js/footycontrollers.js"></script>
+    <script src="app/js/app.module.js"></script>
+    <script src="app/js/login/login.controller.js"></script>
+    <script src="app/js/login/login.service.js"></script>
 
 </head>
 
-
-<body ng-controller="AptiFootballController as footyController">
+<body ng-controller="LoginController as vm">
 <div class="container">
     <div class="row centered-form">
         <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Aptifooty wants you!</h3>
+                    <h1 class="panel-title">Aptifooty wants you!</h1>
                 </div>
                 <div class="panel-body">
-                    <form role="form" ng-submit="footyController.registerUser()">
-
+                    <form role="form" ng-submit="vm.registerUser()">
                         <div class="form-group">
-                            <input type="text" ng-model="username" name="username" id="username"
-                                   class="form-control input-sm"
+                            <input type="text" ng-model="vm.user.username" name="username" id="username"
+                                   class="form-control input-lg"
                                    placeholder="Username" required>
-                            <input type="text" ng-model="email" name="email" id="email" class="form-control input-sm"
+                            <input type="text" ng-model="vm.user.email" name="email" id="email" class="form-control input-lg"
                                    placeholder="Email address" required>
                         </div>
 
-                        <input type="submit" value="Register" class="btn btn-info btn-block">
-
+                        <input type="submit" value="Register" ng-disabled="!vm.user.username || !vm.user.email" class="btn btn-lg btn-info btn-block">
                     </form>
-
-
                 </div>
             </div>
         </div>
