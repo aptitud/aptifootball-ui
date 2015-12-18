@@ -14,6 +14,7 @@
 
 * {
   font-family: 'Roboto', sans-serif;
+  font-size: 12px;
 }
 
 html {
@@ -29,6 +30,24 @@ body {
 
 h1,h2,h3,h4 {
   font-family: 'Oswald', sans-serif;
+}
+
+.backend-status {
+  background: gray;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  border-top-right-radius: 10px;
+  font-size: 0.7em;
+}
+
+.backend-status.up {
+  background: #AED4B3;
+}
+
+.backend-status.down {
+  background: #D4AEAE;
 }
 
 .login {

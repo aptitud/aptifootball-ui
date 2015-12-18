@@ -18,12 +18,15 @@
 
   <script src="app/scripts/app.module.js"></script>
   <script src="app/scripts/router.config.js"></script>
+  <script src="app/scripts/main.controller.js"></script>
+  <script src="app/scripts/ping/ping.service.js"></script>
   <script src="app/scripts/user/user.controller.js"></script>
   <script src="app/scripts/user/user.service.js"></script>
 
 </head>
 
-<body>
+<body ng-controller="MainController as main">
+  <div ng-show="main.backendStatus" class="backend-status" ng-class="main.backendStatus">Backend is {{main.backendStatus}}</div>
   <div class="container">
     <div ui-view></div>
   </div>

@@ -13,7 +13,7 @@
       }
 
       function onRegisterUserSuccess(user) {
-        toastr.success('Created user ' + user.username);
+        toastr.success('Created user ' + user.username + ' (' + user.email + ')');
         $state.go('leauge');
       }
 
