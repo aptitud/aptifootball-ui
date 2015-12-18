@@ -8,10 +8,10 @@
       vm.league = null;
       vm.leagues = ['League1', 'League2'];
 
-
       vm.registerLeague = function() {
-        LeagueController.createLeague(vm.user)
-          .then(onRegisterLeagueSuccess, onRegisterLeagueFailure);
+        vm.leagues.push(vm.league.name);
+        /*LeagueService.createLeague(vm.user)
+          .then(onRegisterLeagueSuccess, onRegisterLeagueFailure);*/
       }
 
       function onRegisterLeagueSuccess(user) {

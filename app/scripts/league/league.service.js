@@ -6,7 +6,6 @@
     .service('LeagueService', function($http) {
       this.createLeague = createLeague;
 
-
       function getLeagues(userId) {
         return $http.get('http://aptifootball-api.herokuapp.com/aptifootball/league/' + userId)
           .then(onSuccess);
