@@ -14,7 +14,7 @@
 
       function onRegisterUserSuccess(user) {
         toastr.success('Created user ' + user.username + ' (' + user.email + ')');
-        $state.go('leauge');
+        $state.go('league');
       }
 
       function onRegisterUserFailure(error) {
