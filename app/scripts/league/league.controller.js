@@ -6,19 +6,21 @@
     .controller('LeagueController', function(LeagueService, toastr) {
       var vm = this;
       vm.league = null;
+      vm.leagues = ['League1', 'League2'];
+
 
       vm.registerLeague = function() {
         LeagueController.createLeague(vm.user)
-          .then(onRegisterUserSuccess, onRegisterUserFailure);
+          .then(onRegisterLeagueSuccess, onRegisterLeagueFailure);
       }
 
-      function onRegisterUserSuccess(user) {
+      function onRegisterLeagueSuccess(user) {
         toastr.success('Created user ' + user.username);
       }
 
-      function onRegisterUserFailure(error) {
-        console.log('Failed to create user ' + JSON.stringify(error))
-        toastr.error('Failed to create user! Check browser log for more info...');
+      function onRegisterLeagueFailure(error) {
+        console.log('Failed to create league ' + JSON.stringify(error))
+        toastr.error('Failed to create league! Check browser log for more info...');
       }
 
     });

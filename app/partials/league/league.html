@@ -1,18 +1,33 @@
 <div class="row centered-form login">
-  <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-    <div class="panel panel-aptifooty">
-      <div class="panel-heading">
-        <h1 class="panel-title">Create a league</h1>
-      </div>
-      <div class="panel-body">
-        <form role="form" ng-submit="vm.registerLeague()">
-          <div class="form-group">
-            <input type="text" ng-model="vm.league.name" name="name" id="name" class="form-control input-lg" placeholder="League name" required>
-          </div>
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-aptifooty">
+            <div class="panel-heading">
+                <h1 class="panel-title">Aptifooty wants you!</h1>
+            </div>
+            <div class="panel-body">
+                <form role="form" ng-submit="vm.registerLeague()">
+                    <div class="form-group">
+                        <input type="text" ng-model="vm.league.name" name="name" id="name" class="form-control input-lg"
+                               placeholder="League name" required>
+                    </div>
+                    <input type="submit" value="Register" ng-disabled="!vm.league.name"
+                           class="btn btn-lg btn-default btn-block">
+                </form>
+            </div>
 
-          <input type="submit" value="Create" ng-disabled="!vm.league.name" class="btn btn-lg btn-default btn-block">
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+        </div>
+
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-aptifooty">
+                <div class="panel-heading">
+                    <center><h1 class="panel-title">Your leagues</h1></center>
+                </div>
+                <div class="panel-body">
+
+                    <div ng-repeat="league in vm.leagues">
+                        <strong>{{league}}</strong>
+                    </div>
+                </div>
+
+            </div>
+        </div>

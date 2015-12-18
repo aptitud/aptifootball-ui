@@ -12,6 +12,11 @@
           .then(onSuccess);
       }
 
+      function getLeague(leagueId) {
+          return $http.get('http://aptifootball-api.herokuapp.com/aptifootball/league/' + leagueId)
+            .then(onSuccess);
+      }
+
       function createLeague(league) {
         return $http.post('http://aptifootball-api.herokuapp.com/aptifootball/league', league)
           .then(onSuccess);
