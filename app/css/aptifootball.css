@@ -1,3 +1,14 @@
+body {
+    background-image:url('/app/img/football_pitch_by_haqn.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.login {
+    margin-top: 25px;
+}
+
+
 .left {
     clear:left;
 }
