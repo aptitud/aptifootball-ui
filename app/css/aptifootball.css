@@ -1,0 +1,13 @@
+.left {
+    clear:left;
+}
+
+.spaceDown {
+    padding-bottom: 15px;
+}
+.spaceRight {
+    margin-right: 50px;
+}
+.width20em {
+    width:20em;
+}
