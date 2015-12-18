@@ -3,7 +3,7 @@
 
   angular
     .module('footyApp')
-    .controller('UserController', function(UserService, toastr) {
+    .controller('UserController', function(UserService, toastr, $state) {
       var vm = this;
       vm.user = null;
 
@@ -14,6 +14,7 @@
 
       function onRegisterUserSuccess(user) {
         toastr.success('Created user ' + user.username);
+        $state.go('leauge');
       }
 
       function onRegisterUserFailure(error) {

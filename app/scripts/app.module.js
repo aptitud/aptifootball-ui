@@ -1,6 +1,6 @@
 (function() {
   'use strict';
 
-  angular.module('footyApp', ['toastr']);
+  angular.module('footyApp', ['ui.router', 'toastr']);
 
 })();

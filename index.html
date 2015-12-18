@@ -13,36 +13,19 @@
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
   <script src="node_modules/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
 
   <script src="app/scripts/app.module.js"></script>
+  <script src="app/scripts/router.config.js"></script>
   <script src="app/scripts/user/user.controller.js"></script>
   <script src="app/scripts/user/user.service.js"></script>
 
 </head>
 
-<body ng-controller="UserController as vm">
+<body>
   <div class="container">
-    <div class="row centered-form login">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-        <div class="panel panel-aptifooty">
-          <div class="panel-heading">
-            <h1 class="panel-title">Aptifooty wants you!</h1>
-          </div>
-          <div class="panel-body">
-            <form role="form" ng-submit="vm.registerUser()">
-              <div class="form-group">
-                <input type="text" ng-model="vm.user.username" name="username" id="username" class="form-control input-lg" placeholder="Username" required>
-              </div>
-              <div class="form-group">
-                <input type="text" ng-model="vm.user.email" name="email" id="email" class="form-control input-lg" placeholder="Email address" required>
-              </div>
-              <input type="submit" value="Register" ng-disabled="!vm.user.username || !vm.user.email" class="btn btn-lg btn-default btn-block">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div ui-view></div>
   </div>
 
 </body>
