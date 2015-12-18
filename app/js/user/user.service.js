@@ -3,7 +3,7 @@
 
   angular
     .module('footyApp')
-    .service('LoginService', function($http) {
+    .service('UserService', function($http) {
       this.createUser = createUser;
 
       function createUser(user) {

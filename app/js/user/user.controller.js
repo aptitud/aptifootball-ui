@@ -3,12 +3,12 @@
 
   angular
     .module('footyApp')
-    .controller('LoginController', function(LoginService, toastr) {
+    .controller('UserController', function(UserService, toastr) {
       var vm = this;
       vm.user = null;
 
       vm.registerUser = function() {
-        LoginService.createUser(vm.user)
+        UserService.createUser(vm.user)
           .then(onRegisterUserSuccess, onRegisterUserFailure);
       }
 
