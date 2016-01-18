@@ -14,6 +14,10 @@
           .then(onRegisterLeagueSuccess, onRegisterLeagueFailure);*/
       }
 
+        vm.getLeague = function(id) {
+            console.log("League #" + id);
+        }
+
       function onRegisterLeagueSuccess(user) {
         toastr.success('Created user ' + user.username);
       }
