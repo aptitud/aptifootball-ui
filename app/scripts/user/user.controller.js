@@ -8,8 +8,10 @@
       vm.user = null;
 
       vm.registerUser = function() {
-        UserService.createUser(vm.user)
-          .then(onRegisterUserSuccess, onRegisterUserFailure);
+//        UserService.createUser(vm.user)
+//          .then(onRegisterUserSuccess, onRegisterUserFailure);
+        console.log("Dummy user created: " + vm.user)
+        $state.go('league');
       }
 
       function onRegisterUserSuccess(user) {

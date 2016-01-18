@@ -3,7 +3,7 @@
 
   angular
     .module('footyApp')
-    .controller('LeagueController', function(LeagueService, toastr) {
+    .controller('LeagueController', function(LeagueService, toastr, $state) {
       var vm = this;
       vm.league = null;
       vm.leagues = [{"id": "0", "name": "League1"}, {"id": "1", "name": "League2"}];
@@ -16,10 +16,11 @@
 
         vm.getLeague = function(id) {
             console.log("League #" + id);
-        }
+            $state.go('selected');
+         }
 
-      function onRegisterLeagueSuccess(user) {
-        toastr.success('Created user ' + user.username);
+      function onRegisterLeagueSuccess(league) {
+        toastr.success('Created league ' + league.name);
       }
 
       function onRegisterLeagueFailure(error) {

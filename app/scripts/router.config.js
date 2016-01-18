@@ -20,6 +20,12 @@
         controller: 'LeagueController as vm'
       })
 
+      .state('selected', {
+              url: '/league',
+              templateUrl: 'app/partials/league/selected.html',
+              controller: 'LeagueController as vm'
+       })
+
     $urlRouterProvider.otherwise('/user');
   };
 
